@@ -101,14 +101,7 @@ container:{
    flexDirection: 'row',
    alignSelf: 'center',
 
- },
-
-  input:{
-    width:'95%',
-    padding:13,
-    paddingLeft:20,
-    fontSize:17,
-  }
+ }
 
 });
 

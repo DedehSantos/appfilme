@@ -97,18 +97,11 @@ container:{
    elevation:10,
    borderRadius:5,
    marginVertical:10,
-   width:'95%',
+   width:'95'%,
    flexDirection: 'row',
    alignSelf: 'center',
 
- },
-
-  input:{
-    width:'95%',
-    padding:13,
-    paddingLeft:20,
-    fontSize:17,
-  }
+ }
 
 });
 

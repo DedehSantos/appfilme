@@ -63,7 +63,7 @@ export default function App() {
                   placeholder="Procurando algo? "
                 />
               <TouchableOpacity style={styles.icon}>
-                <Icon name="search" color="#000" size={25}/>
+                <Icon name="search" color="#000" size={30}/>
               </TouchableOpacity>
             </View>
 
@@ -101,14 +101,7 @@ container:{
    flexDirection: 'row',
    alignSelf: 'center',
 
- },
-
-  input:{
-    width:'95%',
-    padding:13,
-    paddingLeft:20,
-    fontSize:17,
-  }
+ }
 
 });
 

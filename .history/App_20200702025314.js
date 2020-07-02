@@ -88,7 +88,7 @@ container:{
   height:null,
   opacity:1,
   justifyContent:"flex-start",
-  backgroundColor:"#000",
+  backgroundColor:"#000"
 },
 
  viewSearch:{
@@ -101,14 +101,7 @@ container:{
    flexDirection: 'row',
    alignSelf: 'center',
 
- },
-
-  input:{
-    width:'95%',
-    padding:13,
-    paddingLeft:20,
-    fontSize:17,
-  }
+ }
 
 });
 

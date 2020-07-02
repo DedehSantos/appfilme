@@ -60,7 +60,7 @@ export default function App() {
             <View style={styles.viewSearch}>
                 <TextInput
                   styles={styles.input}
-                  placeholder="Procurando algo? "
+                  placeholder="Procuranndo algo? "
                 />
               <TouchableOpacity style={styles.icon}>
                 <Icon name="search" color="#000" size={25}/>
@@ -101,14 +101,7 @@ container:{
    flexDirection: 'row',
    alignSelf: 'center',
 
- },
-
-  input:{
-    width:'95%',
-    padding:13,
-    paddingLeft:20,
-    fontSize:17,
-  }
+ }
 
 });
 

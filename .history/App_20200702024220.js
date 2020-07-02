@@ -57,13 +57,13 @@ export default function App() {
           blurRadius={8}
           
           >
-            <View style={styles.viewSearch}>
+            <View Style={styles.viewSearch}>
                 <TextInput
-                  styles={styles.input}
+                  Styles={styles.input}
                   placeholder="Procurando algo? "
                 />
               <TouchableOpacity style={styles.icon}>
-                <Icon name="search" color="#000" size={25}/>
+                <Icon name="search" color="#fff" size={25}/>
               </TouchableOpacity>
             </View>
 
@@ -88,7 +88,7 @@ container:{
   height:null,
   opacity:1,
   justifyContent:"flex-start",
-  backgroundColor:"#000",
+  backgroundColor:"#000"
 },
 
  viewSearch:{
@@ -96,19 +96,8 @@ container:{
    backgroundColor:'#FFF',
    elevation:10,
    borderRadius:5,
-   marginVertical:10,
-   width:'95%',
-   flexDirection: 'row',
-   alignSelf: 'center',
-
- },
-
-  input:{
-    width:'95%',
-    padding:13,
-    paddingLeft:20,
-    fontSize:17,
-  }
+   marg
+ }
 
 });
 
