@@ -1,7 +1,7 @@
 
 import React, {useState} from 'react';
 import { View, ScrollView, Text, StyleSheet, Dimensions, ImageBackground, TextInput, TouchableOpacity, } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from 'react-native'
 
 const{width: screenWidth, height: screenHeight} = Dimensions.get('window'); 
 

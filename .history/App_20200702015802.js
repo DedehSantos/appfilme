@@ -1,7 +1,7 @@
 
 import React, {useState} from 'react';
-import { View, ScrollView, Text, StyleSheet, Dimensions, ImageBackground, TextInput, TouchableOpacity, } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { View, ScrollView, Text, StyleSheet, Dimensions, ImageBackground, Text } from 'react-native';
+
 
 const{width: screenWidth, height: screenHeight} = Dimensions.get('window'); 
 
@@ -58,13 +58,7 @@ export default function App() {
           
           >
             <View Style={styles.viewSearch}>
-                <TextInput
-                  Styles={styles.input}
-                  placeholder="Procurando algo? "
-                />
-              <TouchableOpacity>
-                <Text>...</Text>
-              </TouchableOpacity>
+
             </View>
 
           </ImageBackground>
