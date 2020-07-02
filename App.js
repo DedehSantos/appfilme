@@ -7,7 +7,7 @@ const{width: screenWidth, height: screenHeight} = Dimensions.get('window');
 
 export default function App() {
   const [lista, setlista] = useState([
-        {
+    {
         title:"O Justiceiro"   ,
         text: "Após o assassinato de sua família, Frank Castle está traumatizado e sendo caçado. No submundo do crime, ele se tornará aquele conhecido como O Justiceiro",
         release: 2018,
@@ -59,13 +59,18 @@ export default function App() {
           >
             <View style={styles.viewSearch}>
                 <TextInput
-                  styles={styles.input}
-                  placeholder="Procurando algo? "
+                  styles={styles.input }
+                  placeholder="Procurando algo? " fontSize={25}                   
                 />
               <TouchableOpacity style={styles.icon}>
                 <Icon name="search" color="#000" size={25}/>
               </TouchableOpacity>
             </View>
+
+            <Text style={{color:'#fff', fontSize:25, fontWeight:'bold',
+           marginLeft:10, marginVertical:10,}}>
+                Acabou de chegar
+            </Text>
 
           </ImageBackground>
        </View>
@@ -98,6 +103,7 @@ container:{
    borderRadius:5,
    marginVertical:10,
    width:'95%',
+   height:50,
    flexDirection: 'row',
    alignSelf: 'center',
 
@@ -107,7 +113,14 @@ container:{
     width:'95%',
     padding:13,
     paddingLeft:20,
-    fontSize:17,
+    fontSize:27,
+    
+  },
+
+  icon:{
+    position: 'absolute',
+    right:20,
+    top:15,
   }
 
 });
