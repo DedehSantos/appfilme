@@ -7,7 +7,7 @@ const{width: screenWidth , height: screenHeight} = Dimensions.get('window');
 
 export default function App() {
   const carouselRef = useRef(null);
-  const [lista, setlista] = useState([
+  const [lista, setLista] = useState([
     {
         title:"O Justiceiro"   ,
         text: "Após o assassinato de sua família, Frank Castle está traumatizado e sendo caçado. No submundo do crime, ele se tornará aquele conhecido como O Justiceiro",
@@ -45,17 +45,17 @@ export default function App() {
         img: 'https://sujeitoprogramador.com/wp-content/uploads/2020/05/freeguy.jpg'
     },
 
-  ])
+  ]);
   const [background, setBackground] = useState(lista[0].img);
   const _renderItem = ({item, index}) => { 
     return(
-      <View>
+       <View>
         
       </View>
 
     );
 
-  }
+  };
   return (
 
     
@@ -85,16 +85,18 @@ source={{uri: background}}
              >
                 Acabou de chegar
             </Text>
-            <View style={styles.slideView}>
-              <Carousel
-                style={styles.carousel}
-                ref={carouselRef}
-                data={lista}
-                renderItem={_renderItem}
-              
-              />
 
-            </View>
+           <View style={styles.slideView}>
+             <Carousel
+               style={styles.carousel}
+               ref={carouselRef}
+               data={lista}
+               renderItem={_renderItem}
+               sliderWidth={screenWidth}
+             
+             />
+
+           </View>
 
           </ImageBackground>
        </View>
