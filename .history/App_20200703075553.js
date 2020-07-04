@@ -1,12 +1,11 @@
 
-import React, {useState, useRef} from 'react';
+import React, {useState} from 'react';
 import { View, ScrollView, Text, StyleSheet, Dimensions, ImageBackground, TextInput, TouchableOpacity, } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import Carousel from 'react-native-snap-carousel';
-const{width: screenWidth , height: screenHeight} = Dimensions.get('window'); 
+
+const{width: screenWidth, height: screenHeight} = Dimensions.get('window'); 
 
 export default function App() {
-  const carouselRef = useRef(null);
   const [lista, setlista] = useState([
     {
         title:"O Justiceiro"   ,
@@ -46,25 +45,13 @@ export default function App() {
     },
 
   ])
-  const [background, setBackground] = useState(lista[0].img);
-  const _renderItem = ({item, index}) => { 
-    return(
-      <View>
-        
-      </View>
-
-    );
-
-  }
+  const [background, setBackground] = useState(lista[0].img)
   return (
-
-    
     <ScrollView style={styles.container}>
      <View style={{flex:1, height: screenHeight}}>
        <View style={{...StyleSheet.absoluteFill, backgroundColor:'#000'}}>
           <ImageBackground
-
-source={{uri: background}}
+          source={{uri: background}}
           style={styles.imgBg}
           blurRadius={8}
           
@@ -85,16 +72,8 @@ source={{uri: background}}
              >
                 Acabou de chegar
             </Text>
-            <View style={styles.slideView}>
-              <Carousel
-                style={styles.carousel}
-                ref={carouselRef}
-                data={lista}
-                renderItem={_renderItem}
-              
-              />
 
-            </View>
+            
 
           </ImageBackground>
        </View>
@@ -145,14 +124,6 @@ container:{
     position: 'absolute',
     right:20,
     top:15,
-  },
-
-  slideView:{
-   width:'100%',
-   height:350,
-   justifyContent:'center',
-   alignItems:'center'
-
   }
 
 });
