@@ -117,11 +117,16 @@ source={{uri: background}}
                
                <View style={styles.moreInfo}>
               <View style={{marginTop:10}}>
-                <Text> {lista[activeIndex].title} </Text>
-                <Text> {lista[activeIndex].text} </Text>
+                <Text style={styles.movieTitle}> {lista[activeIndex].title} </Text>
+                <Text style={styles.movieTDesc}> {lista[activeIndex].text} </Text>
               </View>
-
-               <Icon name="" color="#ff0000"/>
+                <TouchableOpacity style={{marginRight:15, marginTop:10}}
+                 onPress={() => alert('Em BREVE')}
+                >
+                   <Icon name="queue" 
+                   color="#131313" size={30}/>
+                  
+                </TouchableOpacity>
                </View>
 
 
@@ -208,9 +213,32 @@ container:{
     position:'absolute',
     top:15,
     right:15,
+  },
 
+  moreInfo:{
+    backgroundColor:'#fff',
+    width:screenWidth,
+    height:screenHeight,
+    borderTopRightRadius:20,
+    borderTopLeftRadius:20,
+    flexDirection: 'row',
+    justifyContent:'space-around',
+  },
+  movieTitle:{
+    paddingLeft:15,
+    fontSize:22,
+    color: '#131313',
+    marginBottom:5,
+  },
+
+  movieTDesc:{
+
+    paddingLeft:15,
+    color:'#131313',
+    fontSize:14,
+    fontWeight: 'bold'
   }
-
+ 
 
 });
 
