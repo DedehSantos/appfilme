@@ -1,6 +1,6 @@
 
 import React, {useState, useRef} from 'react';
-import { View, ScrollView, Text, StyleSheet, Dimensions, ImageBackground, TextInput, TouchableOpacity, } from 'react-native';
+import { View, ScrollView, Text, StyleSheet, Dimensions, ImageBackground, TextInput, TouchableOpacity,Image } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Carousel from 'react-native-snap-carousel';
 const{width: screenWidth , height: screenHeight} = Dimensions.get('window'); 
@@ -47,9 +47,22 @@ export default function App() {
 
   ]);
   const [background, setBackground] = useState(lista[0].img);
+  const [activeIndex, setActiveIndex] = useState(0);
+
   const _renderItem = ({item, index}) => { 
     return(
        <View>
+         <TouchableOpacity>
+           <Image
+              source={{uri:item.img}}
+              style={styles.carouselImg}
+           />
+           <Text style={styles.carousel}> {item.title} </Text>
+           <Icon 
+             name="play-circle-outline" 
+             size={30} color="#fff" 
+             style={styles.carouselIcon} />
+         </TouchableOpacity>
         
       </View>
 
@@ -66,7 +79,7 @@ export default function App() {
 
 source={{uri: background}}
           style={styles.imgBg}
-          blurRadius={8}
+          blurRadius={3}
           
           >
             <View style={styles.viewSearch}>
@@ -93,10 +106,24 @@ source={{uri: background}}
                data={lista}
                renderItem={_renderItem}
                sliderWidth={screenWidth}
-             
+               itemWidth = {200}
+               inactiveSlideOpacity={0.5}
+               onSnapToItem={(index) =>{
+                 setBackground(lista[index].img);
+                 setActiveIndex(index);
+               } }
              />
-
            </View>
+               
+               <View style={styles.moreInfo}>
+              <View style={{marginTop:10}}>
+                <Text> {lista[activeIndex].title} </Text>
+                <Text> {lista[activeIndex].text} </Text>
+              </View>
+
+               <Icon name="" color="#ff0000"/>
+               </View>
+
 
           </ImageBackground>
        </View>
@@ -155,7 +182,35 @@ container:{
    justifyContent:'center',
    alignItems:'center'
 
+  },
+
+  carousel:{
+   flex:1,
+   overflow:"visible",
+  },
+
+  carouselImg:{
+    alignSelf: 'center',
+    width: 200,
+    height:300,
+    borderRadius:12,
+    backgroundColor:'rgba(0,0,0,0.5)'
+  },
+  carouselText:{
+    padding:15,
+    color: '#fff',
+    position:'absolute',
+    bottom:10,
+    left:2,
+    fontWeight: 'bold',
+  },
+  carouselIcon:{
+    position:'absolute',
+    top:15,
+    right:15,
+
   }
+
 
 });
 
